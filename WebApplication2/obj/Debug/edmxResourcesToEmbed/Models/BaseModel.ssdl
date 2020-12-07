@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VentasDWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Producto_v2">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="nom_prod" Type="nchar" MaxLength="50" />
+    <Property Name="valor_producto" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'VentasDW.dbo.Productos' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Productos">
+          <Property Name="id_producto" Type="int" />
+          <Property Name="desc_producto" Type="nvarchar" MaxLength="50" />
+          <Property Name="valor_unitario" Type="int" />
+        </EntityType>-->
+  <EntityContainer Name="VentasDWModelStoreContainer">
+    <EntitySet Name="Producto_v2" EntityType="Self.Producto_v2" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

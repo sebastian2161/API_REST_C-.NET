@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VentasDWModelStoreContainer" CdmEntityContainer="VentasDWEntities1">
+    <EntitySetMapping Name="Producto_v2">
+      <EntityTypeMapping TypeName="VentasDWModel.Producto_v2">
+        <MappingFragment StoreEntitySet="Producto_v2">
+          <ScalarProperty Name="valor_producto" ColumnName="valor_producto" />
+          <ScalarProperty Name="nom_prod" ColumnName="nom_prod" />
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
